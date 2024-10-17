@@ -14,8 +14,11 @@ public class Main {
         double e = sc.nextDouble();
 
         double sumOfN = 0, grThanE = 0, grThanEDivTen = 0, funcRes, prevVal = x;
+        
+        int multiplyer = 1;
         for (int i = 1; i < n * 2; i+=2) {
-            double res = Math.pow(-1, i) * f(i, prevVal, x);
+            multiplyer *= -1;
+            double res = multiplyer * f(i, prevVal, x);
 
             sumOfN += res;
             if (Math.abs(res) > e / 10) {
